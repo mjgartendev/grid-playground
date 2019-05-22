@@ -1,0 +1,44 @@
+<label>New Item: 
+  <input bind:value=newItem placeholder="add item"/>
+  </label>
+<button on:click=$addItem(this.newItem)>Add</button>
+<ul>
+{#each $items as item, i}
+  <li>
+    {item}
+    <button on:click="splice('todos', i, 1)">X</button>
+  </li>
+{/each}
+</ul>
+<!-- Default data -->
+<script>
+ 	import { push, splice } from 'svelte-extras';
+
+  export default {
+    data() {
+      return {
+        newItem: ''
+      };
+    },
+    methods: {
+      push,
+      splice
+    }
+  };
+</script>
+
+<!-- Include styles -->
+<style>
+ ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	li button {
+		color: rgb(200,0,0);
+		background: rgba(200,0,0,0.1);
+		border-color: rgba(200,0,0,0.2);
+    border-radius: 9999px;
+		padding: 0.1em 0.25em;
+	}
+</style>

@@ -1,0 +1,9 @@
+{
+  "name": "svelte",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "svelte": "^2.16.1",
+    "svelte-extras": "^2.0.2"
+  }
+}

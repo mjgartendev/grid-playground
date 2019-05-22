@@ -1,0 +1,50 @@
+<div class="grid" 
+     style="grid-template-areas:{$areas}; grid-template-columns:{$cols}; grid-template-rows:{$rows}; color:{$fg}; grid-column-gap:{$colGap}; grid-row-gap:{$rowGap}; padding:{$p}; margin:{$m};">
+	<header id="header" class="grid-item">
+		<slot name="top">{$t}</slot>
+	</header>
+	<nav id="nav" class="grid-item">
+		<slot name="left">{$l}</slot>
+	</nav>
+	<main id="main" class="grid-item">
+		<slot>
+      <pre><code>
+      </code></pre>
+      </slot>
+	</main>
+	<aside id="aside" class="grid-item">
+		<slot name="right">{$r}</slot>
+	</aside>
+	<footer id="footer" class="grid-item">
+		<slot name="footer">{$b}</slot>
+	</footer>
+</div>
+
+<style>
+	.grid {
+		display: grid;
+		height: 100%;
+    background: #ccc;
+	}
+
+	.grid-item {
+    background: #fff;
+		border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	}
+
+	#header {grid-area: t}
+	#nav {grid-area: l}
+	#main {grid-area: c}
+	#aside {grid-area: r}
+	#footer {grid-area: b}
+</style>
+
+<script>
+	export default {
+  
+}
+
+</script>

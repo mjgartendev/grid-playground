@@ -1,0 +1,43 @@
+<div class="container">
+	<section id="config">
+    <SideBar />
+	</section>
+	<section id="output">
+		<MainView />
+  </section>
+  <section id="explorer" class="toolbar">
+    <ToolBar />
+  </section>
+</div>
+
+<script>
+ 
+  export default {
+    components: { 
+       MainView: './MainView.html',
+       SideBar: './SideBar.html',
+       ToolBar: './ToolBar.html'
+    }
+  };
+</script>
+
+<!-- Include styles -->
+<style>
+  .container {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right: 0;    
+    grid-template-areas: 'left right' 'btm btm';
+    grid-template-columns: auto 4fr;
+    grid-template-rows: 1fr auto;
+  }
+  .toolbar{background: #f1f1f1; border: 1px solid #ccc;}
+  #explorer{grid-area: btm}
+  #config {background-color: #f1f1f1; border: 1px solid #ccc; grid-area: left}
+  #output {color: #ccc; grid-area: right}
+</style>

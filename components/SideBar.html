@@ -1,0 +1,74 @@
+<div class="sidebar">
+  <div class="form-control">
+    <label for="rows">Rows</label>
+    <input class="input" type="text" name="rows" bind:value=$rows />
+  </div>
+  <div class="form-control">
+    <label for="cols">Cols</label>
+    <input class="input" type="text" name="cols" bind:value=$cols />
+  </div>
+  <div class="form-control">
+    <label for="areas">Areas</label>
+    <textarea class="textarea" type="text" rows=3 name="areas" bind:value=$areas />
+  </div>
+  <div class="form-control">
+    <label for="row-gap">Row Gap</label>
+    <input class="input" type="text" name="row-gap" bind:value=$rowGap />
+  </div>
+  <div class="form-control">
+    <label for="col-gap">Col Gap</label>
+    <input class="input" type="text" name="col-gap" bind:value=$colGap />
+  </div>
+  <div class="form-control">
+    <label for="padding">Padding</label>
+    <input class="input" type="text" name="padding" bind:value=$p />
+  </div>
+  <div class="form-control">
+    <label for="margin">Margin</label>
+    <input class="input" type="text" name="margin" bind:value=$m />
+  </div>
+  <div class="form-control">
+    <label for="flex-flow">Default Flow</label>
+    <input class="input" type="text" name="flex-flow" bind:value=$flow />
+  </div>
+  <div class="form-control">
+    <label for="primary-color">Color</label>
+    <input class="input" type="text" name="primary-color" bind:value=$fg />
+  </div>
+</div>
+
+<style>
+  .sidebar {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4px;
+    background-color: #f1f1f1;  
+  }
+  .form-control {
+    max-width: 150px;
+    width: 120px;
+    font-weight: bold;
+    text-size: .8rem;
+    font-family: monospace;
+    margin-bottom: 8px;
+  }
+  .input, input, .textarea {
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #aaa;
+    background: #ddd;
+    padding: .25rem;
+    max-width: 100%;
+    margin-top: 4px;
+  }
+  label {
+    display: block;
+  }
+  textarea, .textarea {
+   text-align: left;
+   overflow: hidden;
+  }
+
+</style>
